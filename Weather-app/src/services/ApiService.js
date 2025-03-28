@@ -1,7 +1,7 @@
 import axios from "axios";
-const API_WEATHER =
-  "https://api.openweathermap.org/data/2.5/weather?lang=vi&units=metric";
-const API_KEY = "02ac31aab528819053457737dd81930f";
+import API_WEATHER from "../constants/ApiWeather";
+
+const API_KEY = import.meta.env.VITE_API_KEY;
 const getWeatherData = async (cityname) => {
   try {
     const data = await axios.get(
